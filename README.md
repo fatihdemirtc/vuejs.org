@@ -25,7 +25,7 @@ Bu dökümantasyon projesi için çeviriler farklı repolara ayrılıp orjinalin
 Japonca çeviri [Vue.js japan user group](https://github.com/vuejs-jp) tarafından geliştirilmektedir.
 
 * Çeviri Reposu - [/vuejs/jp.vuejs.org](https://github.com/vuejs/jp.vuejs.org)
-* Anan Geliştirici - [kazupon](https://github.com/kazupon)
+* Ana Geliştirici - [kazupon](https://github.com/kazupon)
 
 ### Rusça
 
