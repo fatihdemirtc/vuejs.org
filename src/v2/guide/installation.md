@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Kurulum
 type: guide
 order: 1
 vue_version: 2.2.0
@@ -9,82 +9,82 @@ gz_size: "26.87"
 ro_gz_size: "18.71"
 ---
 
-### Compatibility Note
+### Uyumluluk Notu
 
-Vue does **not** support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all [ECMAScript 5 compliant browsers](http://caniuse.com/#feat=es5).
+Vue IE8 ve altına destek vermemektedir çünkü ECMAScript 5 özelliklerinden faydalanır ve bu özellikler IE8'de desteklenmemektedir. Ancak Vue diğer [ECMAScript 5 destekleyen tüm tarayıcıları](http://caniuse.com/#feat=es5) desteklemektedir.
 
-### Release Notes
+### Sürüm Notları
 
-Detailed release notes for each version are available on [GitHub](https://github.com/vuejs/vue/releases).
+Detaylandırılmış olan tüm sürüm notları [GitHub](https://github.com/vuejs/vue/releases)'da mevcuttur.
 
-## Direct `<script>` Include
+## Doğrudan `<script>` Dahil etmek
 
-Simply download and include with a script tag. `Vue` will be registered as a global variable.
+Basitçe indirin ve bir script tag'i ile dahil edin. `Vue` global bir değişken olarak kayıt edilecektir.
 
-<p class="tip">Don't use the minified version during development. You will miss out on all the nice warnings for common mistakes!</p>
+<p class="tip">Geliştirme ortamında sıkıştırılmış versiyonu kullanmayın. Aksi halde sık yapılan hatalar için güzel uyarıları kaçıracaksınız.</p>
 
 <div id="downloads">
-<a class="button" href="/js/vue.js" download>Development Version</a><span class="light info">With full warnings and debug mode</span>
+<a class="button" href="/js/vue.js" download>Geliştirme Ortamı Versiyonu</a><span class="light info">(Tüm uyarılar ve hata ayıklama modu ile birlikte)</span>
 
-<a class="button" href="/js/vue.min.js" download>Production Version</a><span class="light info">Warnings stripped, {{gz_size}}kb min+gzip</span>
+<a class="button" href="/js/vue.min.js" download>`Production` Versiyonu</a><span class="light info">Uyarılar olmadan, {{gz_size}}kb min+gzip</span>
 </div>
 
 ### CDN
 
-Recommended: [https://unpkg.com/vue](https://unpkg.com/vue), which will reflect the latest version as soon as it is published to npm. You can also browse the source of the npm package at [https://unpkg.com/vue/](https://unpkg.com/vue/).
+Tavsiye Edilen: [https://unpkg.com/vue](https://unpkg.com/vue), en son sürüm npm üzerinde yayınlandığında güncellenecektir. Ayrıca kaynak dosyasını [https://unpkg.com/vue/](https://unpkg.com/vue/) üzerinden görebilirsiniz.
 
-Also available on [jsDelivr](//cdn.jsdelivr.net/vue/latest/vue.js) or [cdnjs](//cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js), but these two services take some time to sync so the latest release may not be available yet.
+Ayrıca [jsDelivr](//cdn.jsdelivr.net/vue/latest/vue.js) ve [cdnjs](//cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) adreslerinde mevcut, ancak bu iki hizmetin senkronize edilmesi biraz zaman alabilir, bu nedenle en yeni sürüm henüz uygun olmayabilir.
 
 ## NPM
 
-NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/). Vue also provides accompanying tools for authoring [Single File Components](single-file-components.html).
+Vue ile büyük ölçekli uygulamalar inşa ederken NPM önerilen kurulum metodudur. [Webpack](https://webpack.js.org/) veya [Browserify](http://browserify.org/) gibi modül paketleyicileriyle birlikte iyi çalışır.
 
 ``` bash
-# latest stable
-$ npm install vue
+# son stabil versiyon
+$ npm install vue --save
 ```
 
-## CLI
+## CLI (Komut Satırı)
 
-Vue.js provides an [official CLI](https://github.com/vuejs/vue-cli) for quickly scaffolding ambitious Single Page Applications. It provides batteries-included build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds:
+Vue.js hızlıca SPA yaratmanız için resmi olarak bir [CLI](https://github.com/vuejs/vue-cli) aracı sağlıyor. hot-reload, lint-on-save ve production-ready build'ler alıp ilerlemeniz yalnızca bir kaç dakika sürer;
 
 ``` bash
-# install vue-cli
+# vue-cli'yi kur
 $ npm install --global vue-cli
-# create a new project using the "webpack" template
+# "webpack"'i kullanarak yeni bir proje oluştur
 $ vue init webpack my-project
-# install dependencies and go!
+# bağımlılıkları kur ve ilerle!
 $ cd my-project
 $ npm install
 $ npm run dev
 ```
 
-<p class="tip">The CLI assumes prior knowledge of Node.js and the associated build tools. If you are new to Vue or front-end build tools, we strongly suggest going through <a href="./">the guide</a> without any build tools before using the CLI.</p>
+<p class="tip">CLI ile kurulum yaparken, Node.js ve ilgili geliştirme araçları hakkında önceden bilgi sahibi olduğunuz varsayılmaktadır. Vue veya frontend araçlarını kullanmaya yeni başlıyorsanız, CLI'yi kullanmadan önce <a href="./">kılavuzla</a> birlikte oluşturma araçları olmadan kurulumu öğrenmenizi öneririz.</p>
 
-## Explanation of Different Builds
+## Farklı Derlemelerin Açıklanması
 
-In the [`dist/` directory of the NPM package](https://unpkg.com/vue@latest/dist/) you will find many different builds of Vue.js. Here's an overview of the difference between them:
+[NPM paketinin içerisinde ki `dist/` klasöründe](https://unpkg.com/vue@latest/dist/) Vue.js'in farklı build'lerini bulabilirsin. Aşağıda aralarında ki farkı gösteren bi tablo var:
 
 | | UMD | CommonJS | ES Module |
 | --- | --- | --- | --- |
-| **Full** | vue.js | vue.common.js | vue.esm.js |
-| **Runtime-only** | vue.runtime.js | vue.runtime.common.js | vue.runtime.esm.js |
-| **Full (production)** | vue.min.js | - | - |
-| **Runtime-only (production)** | vue.runtime.min.js | - | - |
+| **Tam** | vue.js | vue.common.js | vue.esm.js |
+| **Sadece-Runtime** | vue.runtime.js | vue.runtime.common.js | vue.runtime.esm.js |
+| **Tam (production)** | vue.min.js | - | - |
+| **Sadece-Runtime (production)** | vue.runtime.min.js | - | - |
 
-### Terms
+### Terimler
 
-- **Full**: builds that contains both the compiler and the runtime.
+- **Tam**: Hem derleyiciyi hem de runtime'ı içeren derleme.
 
-- **Compiler**: code that is responsible for compiling template strings into JavaScript render functions.
+- **Derleyici**: Template strings'leri Javascript render fonksiyonu içerisine derlemekle sorumlu kod.
 
-- **Runtime**: code that is responsible for creating Vue instances, rendering and patching virtual DOM, etc. Basically everything minus the compiler.
+- **Runtime**: Vue instance'ları oluşturmakla, Virtual DOM oluşturma ve patch'leme ile sorumlu kod bloğu. 
 
-- **[UMD](https://github.com/umdjs/umd)**: UMD builds can be used directly in the browser via a `<script>` tag. The default file from Unpkg CDN at [https://unpkg.com/vue](https://unpkg.com/vue) is the Runtime + Compiler UMD build (`vue.js`).
+- **[UMD](https://github.com/umdjs/umd)**: UMD build'i direkt olarak tarayıcıda bir `<script>` tagi ile kullanılabilir. [https://unpkg.com/vue](https://unpkg.com/vue) CDN'inde bulunan (`vue.js`) Runtime ve Derleyiciyi içerir.
 
-- **[CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1)**: CommonJS builds are intended for use with older bundlers like [browserify](http://browserify.org/) or [webpack 1](https://webpack.github.io). The default file for these bundlers (`pkg.main`) is the Runtime only CommonJS build (`vue.runtime.common.js`).
+- **[CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1)**: CommonJS build'leri [browserify](http://browserify.org/) veya [webpack 1](https://webpack.github.io) gibi daha eski paketleyiciler ile kullanılmak üzere tasarlanmıştır.
 
-- **[ES Module](http://exploringjs.com/es6/ch_modules.html)**: ES module builds are intended for use with modern bundlers like [webpack 2](https://webpack.js.org) or [rollup](http://rollupjs.org/). The default file for these bundlers (`pkg.module`) is the Runtime only ES Module build (`vue.runtime.esm.js`).
+- **[ES Module](http://exploringjs.com/es6/ch_modules.html)**: ES module buid'leri [webpack 2](https://webpack.js.org) veya [rollup](http://rollupjs.org/) gibi daha modern paketleyiciler ile kullanılmak üzere tasarlanmıştır.
 
 ### Runtime + Compiler vs. Runtime-only
 
