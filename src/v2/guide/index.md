@@ -1,14 +1,14 @@
 ---
-title: Introduction
+title: Tanıtım
 type: guide
 order: 2
 ---
 
-## What is Vue.js?
+## Vue.js Nedir?
 
-Vue (okunuş /vjuː/, **view** gibi) kullanıcı arayüzlerini oluşturmak için **progressive framework** 'tür . Diğer monolitik frameworklerin aksine , Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with [modern tooling](single-file-components.html) and [supporting libraries](https://github.com/vuejs/awesome-vue#libraries--plugins).
+Vue (okunuş /vjuː/, **view** gibi) kullanıcı arayüzlerini oluşturmak için **ölçeklenebilir framework** 'tür . Diğer monolitik frameworklerin aksine , görünüm tasarlanmış ve aşamalı olarak kabul edilmesi düşünülmüştür. Çekirdek kütüphane yalnızca görünüm katmanı üzerinde yoğunlaşmıştır, ayağa kaldırmak ve diğer kütüphanelerle entegre etmek çok kolaydır. Öte yandan, Vue [modern araç](tek-sayfa-bilesenleri.html) ve [ek kütüphaneler](https://github.com/vuejs/awesome-vue#libraries--plugins) ile birleştiği zaman tek sayfalık web uygulamalarını çalıştırabilecek güçtedir.
 
-If you are an experienced frontend developer and want to know how Vue compares to other libraries/frameworks, check out the [Comparison with Other Frameworks](comparison.html).
+Deneyimli bir frontend geliştiricisi iseniz ve Vue'nun diğer kütüphaneler / frameworklerle nasıl karşılaştırıldığını öğrenmek istiyorsanız, [Diğer Frameworklerle Karşılaştırma](karsilastirma.html) bölümüne göz atın.
 
 ## Getting Started
 
